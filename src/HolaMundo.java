@@ -9,7 +9,7 @@
  * @author Curso
  * 
  */
-
+ 
 public class HolaMundo {
 	
 	//Las clases empiezan con mayúscula y las variables con minúscula.

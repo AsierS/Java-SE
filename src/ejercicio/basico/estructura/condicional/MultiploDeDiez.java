@@ -10,7 +10,7 @@ public class MultiploDeDiez {
 		System.out.println("Introduzca el número que quieras comprobar:");
 		numero = sc.nextInt();
 
-		sc.close();
+ 		sc.close();
 
 		if (numero % 10 == 0) {
 			System.out.println("El número " + numero + " es múltiplo de 10.");

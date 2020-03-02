@@ -10,7 +10,7 @@ public class CincoCifrasAlReves {
 		int numerochachi;
 		System.out.println("Introduzca un número de cinco cifras: ");
 		numerochachi = sc.nextInt();
-
+ 
 		System.out.println(numerochachi % 10);
 		System.out.println(numerochachi % 100);
 		System.out.println(numerochachi % 1000);

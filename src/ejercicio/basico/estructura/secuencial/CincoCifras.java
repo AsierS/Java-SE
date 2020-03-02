@@ -10,7 +10,7 @@ public class CincoCifras {
 		 int numerochachi;
 	     System.out.println("Introduzca un número de cinco cifras: ");
 	     numerochachi = sc.nextInt();
-	     
+	      
 	     System.out.println(numerochachi/10000);
 	     System.out.println(numerochachi/1000);
 	     System.out.println(numerochachi/100);

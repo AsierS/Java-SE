@@ -9,7 +9,7 @@ public class MediaNumerosFor {
 		Scanner sc = new Scanner(System.in);
 		float temperatura,min=999999,max=-2000,total=0;
 		int contador=0;
-		
+	 	
 		final String[] DIASEMANA = {"lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"};
 		
 		for (int i=0; i < DIASEMANA.length; i++) {

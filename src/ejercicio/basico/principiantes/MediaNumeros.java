@@ -9,7 +9,7 @@ public class MediaNumeros {
 		int numero1, numero2, numero3;
 		float media;
 		Scanner sc = new Scanner(System.in);
-
+ 
 		System.out.println("Dime el primer número: ");
 		numero1 = Integer.parseInt(sc.nextLine()); // lee una línea que el usuario introduce
 		

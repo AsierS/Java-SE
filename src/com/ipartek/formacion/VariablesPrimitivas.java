@@ -7,7 +7,7 @@ public class VariablesPrimitivas {
 		 * Las variables primitivas siempre empiezan por minúscula y tienen valor
 		 * inicial. Salen en granate.
 		 */
-
+ 
 		// booleanos
 		boolean tienesPatatas = true; // el valor por defecto es false
 

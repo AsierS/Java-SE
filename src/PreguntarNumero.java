@@ -6,7 +6,7 @@ public class PreguntarNumero {
 		// TODO Auto-generated method stub
 		System.out.println("Dime un número: ");
 		Scanner teclado = new Scanner(System.in);
-
+ 
 		int numero = teclado.nextInt(); // lee un número que el usuario introduce
 
 		teclado.close(); // cerramos el teclado

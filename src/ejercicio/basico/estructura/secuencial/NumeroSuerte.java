@@ -8,7 +8,7 @@ public class NumeroSuerte {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int dianacimiento;
-		int mesnacimiento;
+		int mesnacimiento; 
 		int añonacimiento;
 		int totalnacimiento;
 		int numsuerte;

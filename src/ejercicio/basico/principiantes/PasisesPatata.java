@@ -12,7 +12,6 @@ public class PasisesPatata {
 		int[] numeroPatatas = {0, 0, 0, 0};
 		boolean hayInfectados = false;
 		int numeroInfectados;
-		int numeroInfectadosTotal=0;
 		Scanner sc = new Scanner(System.in);
 
 		for (int i=0; i < PAISES.length; i++) {
@@ -22,8 +21,8 @@ public class PasisesPatata {
 			if (hayInfectados==true) {
 				paisesPatatizados[i]=true;
 				System.out.println("¿Cuántos infectados de patata hay en " + PAISES[i] +"?");
-				numeroPatatas=sc.nextLine();
-				numeroInfectadosTotal += numeroInfectados;
+				numeroPatatas[i]=sc.nextLine();
+				numeroInfectados += numeroPatatas[i];
 			} else if(hayInfectados==false) {
 				paisesPatatizados[i]=false;
 			}
@@ -35,6 +34,7 @@ public class PasisesPatata {
 			} else {
 				System.out.println(PAISES[i]+"no está infectado.");
 			}
+			System.out.println("El total de infectados es de "+numeroInfectados+" personas.");
 			
 				
 		}
