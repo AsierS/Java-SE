@@ -13,7 +13,7 @@ public class PasisesPatata {
 		boolean hayInfectados = false;
 		int numeroInfectados=0;
 		Scanner sc = new Scanner(System.in);
-
+		
 		for (int i=0; i < PAISES.length; i++) {
 			System.out.println("¿Hay infectados de patata en " + PAISES[i] +"? True si hay, false si no.");
 			hayInfectados=sc.nextBoolean();
@@ -38,6 +38,7 @@ public class PasisesPatata {
 			
 				
 		}
+		sc.close();
 			
 		//paisesPatatizados[1]=true;
 		//numeroInfectados[1]=5;
