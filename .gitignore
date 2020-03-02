@@ -1,0 +1,7 @@
+####################################
+# ficheros y carpetas que git ignora
+####################################
+/bin/
+/.classpath
+/.project
+/.settings
