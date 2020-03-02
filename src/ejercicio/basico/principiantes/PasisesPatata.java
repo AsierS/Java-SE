@@ -11,17 +11,17 @@ public class PasisesPatata {
 		boolean[] paisesPatatizados = {false, false, false, false};
 		int[] numeroPatatas = {0, 0, 0, 0};
 		boolean hayInfectados = false;
-		int numeroInfectados;
+		int numeroInfectados=0;
 		Scanner sc = new Scanner(System.in);
 
 		for (int i=0; i < PAISES.length; i++) {
 			System.out.println("¿Hay infectados de patata en " + PAISES[i] +"? True si hay, false si no.");
-			hayInfectados=Boolean.getBoolean(sc.nextLine());
+			hayInfectados=sc.nextBoolean();
 			System.out.println(hayInfectados);
 			if (hayInfectados==true) {
 				paisesPatatizados[i]=true;
 				System.out.println("¿Cuántos infectados de patata hay en " + PAISES[i] +"?");
-				numeroPatatas[i]=sc.nextLine();
+				numeroPatatas[i]=sc.nextInt();
 				numeroInfectados += numeroPatatas[i];
 			} else if(hayInfectados==false) {
 				paisesPatatizados[i]=false;
