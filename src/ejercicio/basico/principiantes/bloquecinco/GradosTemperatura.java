@@ -1,5 +1,5 @@
 package ejercicio.basico.principiantes.bloquecinco;
-
+// venimos de: http://puntocomnoesunlenguaje.blogspot.com/p/ejercicios.html
 import java.util.Scanner;
 
 public class GradosTemperatura {
