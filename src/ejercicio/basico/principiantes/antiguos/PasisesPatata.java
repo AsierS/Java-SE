@@ -1,4 +1,4 @@
-package ejercicio.basico.principiantes;
+package ejercicio.basico.principiantes.antiguos;
 
 import java.util.Scanner;
 
@@ -10,34 +10,37 @@ public class PasisesPatata {
 		final String[] PAISES = {"Noruega", "Alemania", "República Checa", "Italia"};
 		boolean[] paisesPatatizados = {false, false, false, false};
 		int[] numeroPatatas = {0, 0, 0, 0};
-		boolean hayInfectados = false;
+		String hayInfectados;
 		int numeroInfectados=0;
 		Scanner sc = new Scanner(System.in);
 		
 		for (int i=0; i < PAISES.length; i++) {
-			System.out.println("¿Hay infectados de patata en " + PAISES[i] +"? True si hay, false si no.");
-			hayInfectados=sc.nextBoolean();
-			System.out.println(hayInfectados);
-			if (hayInfectados==true) {
-				paisesPatatizados[i]=true;
+			System.out.println("¿Hay infectados de patata en " + PAISES[i] +"?");
+			hayInfectados=sc.nextLine();
+			if ("sí".equalsIgnoreCase(hayInfectados)) {
+				
 				System.out.println("¿Cuántos infectados de patata hay en " + PAISES[i] +"?");
-				numeroPatatas[i]=sc.nextInt();
+				//numeroPatatas[i]=Integer.parseInt(sc.nextInt());
+				int pregunta2 = Integer.parseInt(sc.nextLine());
+				
+				paisesPatatizados[i]=true;
+				numeroPatatas[i]=pregunta2;
+				
 				numeroInfectados += numeroPatatas[i];
-			} else if(hayInfectados==false) {
+			} else if("sí".equalsIgnoreCase(hayInfectados)) {
 				paisesPatatizados[i]=false;
 			}
 		}
+		
 		for (int i=0; i < PAISES.length; i++) {
-			if (paisesPatatizados[i]==true) {
-				System.out.println(PAISES[i]+" está infectado.");
-				System.out.println("Aquí hay "+numeroPatatas[i]+" infectados.");
+			if (paisesPatatizados[i]==true && numeroPatatas[i]>2) {
+					System.out.println(PAISES[i]+" está infectado.");
+					System.out.println("Aquí hay "+numeroPatatas[i]+" infectados.");
 			} else {
-				System.out.println(PAISES[i]+"no está infectado.");
+				System.out.println(PAISES[i]+" no está infectado.");
 			}
-			System.out.println("El total de infectados es de "+numeroInfectados+" personas.");
-			
-				
 		}
+		System.out.println("El total de infectados es de "+numeroInfectados+" personas.");
 		sc.close();
 			
 		//paisesPatatizados[1]=true;
