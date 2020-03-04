@@ -11,11 +11,11 @@ import java.util.Scanner;
 public class EjercicioB {
 
 	public static void main(String[] args) {
-
 		int opcion = 0;
 		Scanner sc = new Scanner(System.in);
 		boolean continuar = true;
-
+		int pies;
+		int metros;
 		do {
 
 			System.out.println("1. Calcular letra DNI");
@@ -33,7 +33,9 @@ public class EjercicioB {
 
 			case 2:
 				System.out.println("pedir pies para convetior a metros");
-				// TODO pedir pies para convetior a metros
+				pies=Integer.parseInt(sc.nextLine());
+				metros=pies*4;
+				System.out.println(pies+" pies son "+metros+" metros.");
 				break;
 
 			case 3:
