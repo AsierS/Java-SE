@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Comentar la jugada....
  * 
  * @author ur00
- * iohion
+ * 
  */
 public class EjercicioB {
 
