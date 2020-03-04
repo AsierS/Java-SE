@@ -14,7 +14,7 @@ public class EjercicioA {
 
 		int alturaTotal=0;
 		int alturaMedia=0;
-		int alturaMax=0;
+		int alturaMax=-8;
 		int alturaMin=999999;
 		
 		System.out.println("Empezamos");
@@ -34,10 +34,6 @@ public class EjercicioA {
 			if(alturas[i]<alturaMin) {
 				alturaMin=alturas[i];
 			}
-
-			
-			// TODO altura maxima
-			// TODO altura minima
 
 		} // for
 		
