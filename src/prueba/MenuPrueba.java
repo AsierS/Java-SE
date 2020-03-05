@@ -50,7 +50,7 @@ public class MenuPrueba {
 	private static void codificar() {
 		int textoCodificar;
 		
-		System.out.println("¿Quieres codificar el texto? 1 para sí, 2 para no.");
+		System.out.println("¿Quieres codificar el texto? 1 para sí, \"Tengo hambre y quiero comer una tortilla\" para no.");
 		textoCodificar = Integer.parseInt(sc.nextLine());
 		if (textoCodificar==1) {
 			System.out.println("Vamos a codificar un texto. Dame una frase para trabajar.");
@@ -94,6 +94,7 @@ public class MenuPrueba {
 			int numeroDni=Integer.parseInt(sc.nextLine());
 			int restoDivision = numeroDni % 23;
 			System.out.println("La letra es del DNI "+numeroDni+" es " + LETRA_DNI[restoDivision]+".");
-		}
+			sc.close();
+	}
 
 }
