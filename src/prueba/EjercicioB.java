@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class EjercicioB {
 
-	static Scanner sc = new Scanner(System.in);;
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		int opcion = 0;
 		boolean continuar = true;
