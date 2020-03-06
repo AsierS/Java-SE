@@ -18,14 +18,22 @@ public class UF2404EjercicioB {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		boolean continuar=true;
-		int opcion;
+		//int opcion=0;
 		do {
 			System.out.println("Elige la opción que prefieras:");
 			System.out.println("1) Calcular la letra del DNI.");
 			System.out.println("2) Pasar de cm a pulgadas.");
 			System.out.println("3) Salir.");
+			int opcion=0;
+			do {
+				try {
+					opcion=Integer.parseInt(sc.nextLine());
+				} catch (Exception e) {
+					System.out.println("Mete 1, 2 o 3.");
+				}
+			} while(opcion==0);
 			
-			opcion=Integer.parseInt(sc.nextLine());
+			
 			
 			switch (opcion) {
 				case 1:
@@ -42,20 +50,43 @@ public class UF2404EjercicioB {
 		} while (continuar);//do while
 		sc.close();
 	}//main
+	
 	private static void pasarCentimetrosAPulgadas() {
-		double cm;
+		double cm=0;
 		double pulgadas;
 		System.out.println("Vamos a pasar de centímetros a pulgadas. Dime un número: ");
-		cm=Integer.parseInt(sc.nextLine());
+		do {
+			try {
+				cm=Integer.parseInt(sc.nextLine());
+			} catch (Exception e) {
+				System.out.println("Mete los centímetros.");
+			}
+		} while(cm==0);
+		
 		pulgadas=cm*0.39370;
 		System.out.println(cm+" centímetros son "+pulgadas+" pulgadas.");
 		
 	}//fin de pasarCentimetrosAPulgadas()
+	
 	private static void sacarLetraDNI() {
 		final char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q',
 				'V', 'H', 'L', 'C', 'K', 'E' };
-		System.out.println("Dime el DNI para sacar la letra.");
-		int numeroDni=Integer.parseInt(sc.nextLine());
+		int numeroDni=0;
+		do {
+			System.out.println("Dime el DNI para sacar la letra.");
+			String churroDni=sc.nextLine();
+			if (churroDni.length()==8) {
+				System.out.println("Esto tiene 8 caracteres.");
+				try {
+					numeroDni=Integer.parseInt(churroDni);
+				} catch (Exception e) {
+					System.out.println("Has metido letras. Tienes que meter números.");
+				}
+			} else {
+				System.out.println("Esto está mal, no tiene 8 números.");
+			}
+		} while(numeroDni==0);
+		
 		int restoDivision = numeroDni % 23;
 		System.out.println("La letra del DNI "+numeroDni+" es " + LETRA_DNI[restoDivision]+".");
 		

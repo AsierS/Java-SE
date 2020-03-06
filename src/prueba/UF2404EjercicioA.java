@@ -26,7 +26,15 @@ public class UF2404EjercicioA {
 		for (int i = 0; i < notas.length; i++) {
 
 			System.out.println("Dime la nota:");
-			int nota = Integer.parseInt(sc.nextLine());
+			int nota=0;
+			do {
+				try {
+					nota = Integer.parseInt(sc.nextLine());
+					} catch (Exception e) {
+						System.out.println("Tienes que meter un número.");
+					}
+			} while(nota==0);
+			
 			notas[i] = nota;
 			notaTotal=(int) (notaTotal+notas[i]);
 			if(notas[i]>notaMax) {
