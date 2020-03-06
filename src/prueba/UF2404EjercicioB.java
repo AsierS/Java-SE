@@ -5,10 +5,10 @@ import java.util.Scanner;
 /**
  *<ol>
  *	<li>Crear un proyecto en modo consola que nos muestre un menú de 3 opciones</li>
- *	<li>	Calcular la letra del dni</li>
- *	<li>	Calcular medida de cm a pulgadas</li>
- *	<li>	Salir</li>
- *	<li>	Hacer que dicho menú se ejecute en bucle hasta que se pulse salir, y si el usuario escoge cada una de las funciones, que permita introducir los datos correspondientes por teclado para poder dar el resultado</li>
+ *	<li>Calcular la letra del dni</li>
+ *	<li>Calcular medida de cm a pulgadas</li>
+ *	<li>Salir</li>
+ *	<li>Hacer que dicho menú se ejecute en bucle hasta que se pulse salir, y si el usuario escoge cada una de las funciones, que permita introducir los datos correspondientes por teclado para poder dar el resultado</li>
  *</ol>
  * @author Curso
  *
@@ -20,7 +20,7 @@ public class UF2404EjercicioB {
 		boolean continuar=true;
 		int opcion;
 		do {
-			System.out.println("Elige la opción que prefieras");
+			System.out.println("Elige la opción que prefieras:");
 			System.out.println("1) Calcular la letra del DNI.");
 			System.out.println("2) Pasar de cm a pulgadas.");
 			System.out.println("3) Salir.");
@@ -36,7 +36,7 @@ public class UF2404EjercicioB {
 					break;
 				case 3:
 					System.out.println("Nos vemos. Salvo que yo no tengo ojos. Vamos, márchate.");
-					continuar=false;
+					continuar=false;//cambiamos continuar para salir del bucle
 					break;
 			}			
 		} while (continuar);//do while
@@ -57,7 +57,7 @@ public class UF2404EjercicioB {
 		System.out.println("Dime el DNI para sacar la letra.");
 		int numeroDni=Integer.parseInt(sc.nextLine());
 		int restoDivision = numeroDni % 23;
-		System.out.println("La letra es del DNI "+numeroDni+" es " + LETRA_DNI[restoDivision]+".");
+		System.out.println("La letra del DNI "+numeroDni+" es " + LETRA_DNI[restoDivision]+".");
 		
 	}//fin de sacarLetraDNI()
 
