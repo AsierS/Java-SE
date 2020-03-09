@@ -31,7 +31,7 @@ public class AritmeticaArrayList {
 		System.out.println("Valores leídos: "+ numeros +" +número valores>media");
 		
 		//3 métodos: leerValores(), calcularSuma(), mostrarResultados()
-
+		sc.close();
 	}
 
 }
