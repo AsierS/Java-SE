@@ -23,47 +23,59 @@ a que el programa se cuelgue
 public class ejercicioExceptionsCampus5 {
 
 	public static void main(String[] args) throws Exception {
-		double numAleatorio=0;
-		numAleatorio=(Math.random()*6)+1;
-		if (numAleatorio==1) {	
-			throw new Exception("ArithmeticException");
-		} else if (numAleatorio==2){
-			throw new Exception("NullPointerException");
-		} else if (numAleatorio==3){
-			throw new Exception("NumberFormatException");
-		} else if (numAleatorio==4){
-			throw new Exception("SecurityException");
-		} else if (numAleatorio==5){
-			throw new Exception("NegativeArraySizeException");
-		} else if (numAleatorio==6){
-			throw new Exception("IOException");
-		}
-/*
+		double numAle2=0;
+		numAle2=(Math.random()*6)+1;
+		int numAleatorio=(int) numAle2;
+		if (numAleatorio==1) {
+			System.out.println("ArithmeticException");
+			try {
+				throw new ArithmeticException("ArithmeticException");
 			} catch (ArithmeticException e) {
-				System.out.println("1) Excepción aritmetica");
+				// TODO Auto-generated catch block
 				e.printStackTrace();
-
+			}
+		} else if (numAleatorio==2){
+			System.out.println("NullPointerException");
+			try {
+				throw new NullPointerException("NullPointerException");
 			} catch (NullPointerException e) {
-				System.out.println("2) Excepción nullpointer");
+				// TODO Auto-generated catch block
 				e.printStackTrace();
-
+			}
+		} else if (numAleatorio==3){
+			System.out.println("NumberFormatException");
+			try {
+				throw new NumberFormatException("NumberFormatException");
 			} catch (NumberFormatException e) {
-				System.out.println("3) Excepción NumberFormatException");
+				// TODO Auto-generated catch block
 				e.printStackTrace();
-
+			}
+		} else if (numAleatorio==4){
+			System.out.println("SecurityException");
+			try {
+				throw new SecurityException("SecurityException");
 			} catch (SecurityException e) {
-				System.out.println("4) Excepción SecurityException");
+				// TODO Auto-generated catch block
 				e.printStackTrace();
-
+			}
+		} else if (numAleatorio==5){
+			System.out.println("NegativeArraySizeException");
+			try {
+				throw new NegativeArraySizeException("NegativeArraySizeException");
 			} catch (NegativeArraySizeException e) {
-				System.out.println("5) Excepción NegativeArraySizeException");
+				// TODO Auto-generated catch block
 				e.printStackTrace();
-
-				} catch (IOException e) {
-					System.out.println("6) Excepción IOException");
-					e.printStackTrace();
-			} 
-
-*/		
+			}
+		} else if (numAleatorio==6){
+			System.out.println("IOException");
+			try {
+				throw new IOException("IOException");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}  else {
+			throw new Exception("Excepción genérica.");
+		}
 	}
 }

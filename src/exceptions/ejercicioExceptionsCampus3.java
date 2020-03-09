@@ -23,8 +23,8 @@ public class ejercicioExceptionsCampus3 {
 	public static void main(String[] args) {
 		String tochoTexto;
 		try {
-			letraEnPosicion("LA slluevi en SEcvilla es una maraibvilla", 0);
-			System.out.println();
+			char a=letraEnPosicion("LA slluevi en SEcvilla es una maraibvilla", 3);
+			System.out.println(a);
 		} catch (NullPointerException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Estamos en el catch del NullPointerException.");
@@ -35,8 +35,7 @@ public class ejercicioExceptionsCampus3 {
 		}
 	}
 
-	static char letraEnPosicion(String frase, int posicion) {
-		return frase.charAt(posicion);
-		
+	static char letraEnPosicion(String tochoTexto, int posicion) {
+		return tochoTexto.charAt(posicion);
 	}
 }
