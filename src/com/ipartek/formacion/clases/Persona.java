@@ -1,20 +1,23 @@
 package com.ipartek.formacion.clases;
 
 public class Persona {
-	//Atributos, siempre son private para que no se puedan cambiar desde fuera de ésta clase.
-	//para cambiarlos se crean métodos públicos de nombre getter y setter.
-	//A esto se le llama encapsulación.
+
+	// ATRIBUTOS
+	// siempre son 'private' para que no se puedan manipular desde fuera de esta
+	// clase, para poder manipular los atributos hay que crear metodos 'publicos'
+	// denominados getters y setters. Ha esto se le llama 'encapsulacion'
 	private String nombre;
 	private int edad;
-	
-	//constructor, se llama igual que la clase.
+
+	// CONSTRUCTORES
+	// constructor porque se llama igual que la clase
 	public Persona() {
 		super();
-		this.nombre="Anónimo";
-		this.edad=18;
+		this.nombre = "Anonimo";
+		this.edad = 18;
 	}
-	
-	//getter y setter
+
+	// GETTERS y SETTERS
 	public String getNombre() {
 		return nombre;
 	}
@@ -27,20 +30,20 @@ public class Persona {
 		return edad;
 	}
 
-	public void setEdad(int _edad) {
-		if (_edad<0) {
-			this.edad=0;
+	public void setEdad(int edad) {
+
+		if (edad < 0) {
+			this.edad = 0;
 		} else {
-			this.edad = _edad;
+			this.edad = edad;
 		}
 	}
-	
-	//Otras funciones 
+
+	// OTRAS FUNCIONES
+
 	@Override
 	public String toString() {
 		return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
 	}
 
-	
-	
 }

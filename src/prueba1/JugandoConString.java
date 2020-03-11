@@ -1,4 +1,4 @@
-package prueba;
+package prueba1;
 
 public class JugandoConString {
 
