@@ -35,6 +35,7 @@ public class PersonaPruebasAriketa {
 		System.out.println("Dime la nota: ");
 		luz.setNota(Integer.parseInt(sc.nextLine()));
 		
+		
 		juno.setNombre("Juno");
 		juno.setEdad(23);
 		juno.setEmail("macarrones@patata.com");
