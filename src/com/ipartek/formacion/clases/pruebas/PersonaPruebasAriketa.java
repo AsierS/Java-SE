@@ -17,7 +17,7 @@ public class PersonaPruebasAriketa {
 		
 		//System.out.println(ander.toString());
 		
-		
+		//TODO array alumnos para meterle a cada uno el nombre y resto de datos
 		
 		
 		ander.setAltura(170);
