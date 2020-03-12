@@ -38,6 +38,11 @@ public class AlumnoAriketa extends PersonaAriketa{
 	public void setNota(int nota) {
 		this.nota = nota;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+" AlumnoAriketa [email=" + email + ", github=" + github + ", nota=" + nota + "]";
+	}
 	
 
 }

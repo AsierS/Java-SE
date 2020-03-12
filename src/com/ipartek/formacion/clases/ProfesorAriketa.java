@@ -11,6 +11,11 @@ public class ProfesorAriketa extends PersonaAriketa {
 		
 	}
 
+	@Override
+	public String toString() {
+		return super.toString()+" ProfesorAriketa [sueldo=" + sueldo + ", materia=" + materia + "]";
+	}
+
 	public double getSueldo() {
 		return sueldo;
 	}
