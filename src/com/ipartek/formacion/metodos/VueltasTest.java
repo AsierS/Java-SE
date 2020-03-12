@@ -16,7 +16,7 @@ public class VueltasTest {
 	@Test
 	public void testCalcularVueltasOptimas() throws Exception {
 
-		int[] vueltas = Vueltas.calcularVueltasOptimas(100f, 100f);
+		int[] vueltas = Vueltas.calcularVueltasOptimas(100f, 10f);
 		int[] vueltasCorrectas = new int[Vueltas.BILLETES_MONEDAS.length];
 		assertArrayEquals(vueltas, vueltasCorrectas);
 /*

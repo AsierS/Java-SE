@@ -10,15 +10,20 @@ public class Vueltas {
 		int[] vueltas = new int[BILLETES_MONEDAS.length];
 		int numBilletes=0;
 		// TODO vuestro marron
+		importe=0;
+		int diferencia=0;
 		for (int i = 0; i < BILLETES_MONEDAS.length; i++) {
-			if (importe%BILLETES_MONEDAS[i]==0) {
+			vueltas[i]=(int) (importe/BILLETES_MONEDAS[i]);
+			diferencia=(int) (importe%BILLETES_MONEDAS[i]);
+			
+			
+			/*if (importe%BILLETES_MONEDAS[i]==0) {
 				numBilletes=(int) (importe/BILLETES_MONEDAS[i]);
 				vueltas[i]=numBilletes;
 				if (importe-BILLETES_MONEDAS[i]>=0) {
 					importe=importe-BILLETES_MONEDAS[i];
-				}
+				}*/
 				
-			}
 			System.out.println(vueltas[i]);
 		}
 		
