@@ -32,8 +32,9 @@ public class UF2404EjercicioACochePrueba {
 		UF2404EjercicioACoche[] coches = new UF2404EjercicioACoche[numCoches];
 		
 		int contadorSeguridad=0;
+		//TODO el do while para que salga cuando se lo pidas
 		int continuar=0;
-		do {
+		//do {
 			for (int i = 0; i < coches.length; i++) {
 				contadorSeguridad++;
 				//vamos a usar este objeto varias veces
@@ -54,8 +55,15 @@ public class UF2404EjercicioACochePrueba {
 				//le metemos el objeto al array
 				coches[i] = coche;
 				
+				//le damos al usuario la oportunidad de escapar
+				System.out.println("¿Quires continuar? Escribe 1 para seguir, 2 para salir.");
+				continuar=Integer.parseInt(sc.nextLine());
+				if (continuar!=1) {
+					i=numCoches;
+					break;
+				}
+				
 				//sacamos datos por pantalla
-				//TODO meterelo todo en un sólo for en vez de apañarlo con dos
 				if (i==(numCoches-1)) {
 					System.out.println("El éstas son las características de los coches.");
 					for (int j = 0; j < contadorSeguridad; j++) {
@@ -63,48 +71,10 @@ public class UF2404EjercicioACochePrueba {
 					}
 					
 				}
-				
-			System.out.println("¿Quires continuar? Escribe 1 para seguir, 2 para salir.");
-			continuar=Integer.parseInt(sc.nextLine());					
 			}
-		} while (continuar==1);
+				
+		//} while (continuar==1);
 		
-		/*
-		//creamos un objeto de nombre coche0 (que luego sustituiremos por coche[i])
-		//y le damos algunos datos (luego los pediremos por pantalla)
-		UF2404EjercicioACoche coche0 = new UF2404EjercicioACoche();
-		coche0.setMatricula("ZXC-78");
-		coche0.setCilindrada(70);
-		coche0.setModelo("El barato");
-		
-		
-		UF2404EjercicioACoche coche1 = new UF2404EjercicioACoche();
-		coche1.setMatricula("HJF-79");
-		coche1.setCilindrada(200);
-		coche1.setModelo("El caro");
-		
-		//le pedimos datos al usuario
-		UF2404EjercicioACoche coche2 = new UF2404EjercicioACoche();
-		System.out.println("Vamos a meter los datos del nuevo coche.");
-		System.out.println("Introduce la matrícula.");
-		coche2.setMatricula(sc.nextLine());
-		System.out.println();
-		
-		
-		
-		//le mete los objetos al array
-		coches[0] = coche0;
-		coches[1] = coche1;
-		coches[2] = coche2;
-		
-		//sacamos los datos por pantalla
-		//podemos hacer esto con un for para cada uno de los objetos que tenemos
-		System.out.println("El primer coche tiene estas características");
-		System.out.println(coche0.toString());
-		//System.out.println(coches[0]);
-		System.out.println(coche1.toString());
-		System.out.println(coches[2]);
-		*/
 		sc.close();//cerramos el scanner
 	}//cerramos el main
 
