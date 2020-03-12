@@ -4,7 +4,7 @@ import com.ipartek.formacion.clases.AlumnoProfe;
 import com.ipartek.formacion.clases.PersonaProfe;
 import com.ipartek.formacion.clases.ProfesorProfe;
 
-public class ProfesorALumnos {
+public class ProfesorALumnosAriketa {
 
 	public static void main(String[] args) {
 
@@ -43,12 +43,14 @@ public class ProfesorALumnos {
 
 		// TODO mostrar Alumno con Nota maxima
 		int notaMax=0;
+		String nombreAlumnoConNotaMax="";
 		for (AlumnoProfe alumno : alumnos) {
 			if (notaMax<alumno.getNota()) {
 				notaMax=alumno.getNota();
+				nombreAlumnoConNotaMax=alumno.getNombre();
 			}
 		}
-		System.out.println("La nota máxima es "+notaMax+".");
+		System.out.println("La nota máxima es de "+nombreAlumnoConNotaMax+" y es de "+notaMax+".");
 		
 		// TODO mostrar media de las notas
 		int notaTotal=0;
@@ -56,7 +58,7 @@ public class ProfesorALumnos {
 		for (AlumnoProfe alumnoProfe : alumnos) {
 			notaTotal += alumnoProfe.getNota();
 		}
-		notaMedia=notaTotal/3;
+		notaMedia=notaTotal/alumnos.length;
 		System.out.println(notaMedia);
 
 	}

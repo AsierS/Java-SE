@@ -2,6 +2,7 @@ package com.ipartek.formacion.clases;
 
 public class PersonaAriketa {
 
+	public static final char GENERO_INDEFINIDO = 0;
 	// 1. Atributos
 	protected String nombre;
 	protected int altura;
