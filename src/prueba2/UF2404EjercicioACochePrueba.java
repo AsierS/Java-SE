@@ -32,7 +32,6 @@ public class UF2404EjercicioACochePrueba {
 		UF2404EjercicioACoche[] coches = new UF2404EjercicioACoche[numCoches];
 		
 		int contadorSeguridad=0;
-		//TODO el do while para que salga cuando se lo pidas
 		int continuar=0;
 		//do {
 			for (int i = 0; i < coches.length; i++) {
@@ -43,14 +42,20 @@ public class UF2404EjercicioACochePrueba {
 				//le pedimos datos
 				System.out.println("Vamos a meter los datos del coche.");
 				
-				System.out.println("Dame la cilindrada");
-				coche.setCilindrada(Float.parseFloat(sc.nextLine()));
-				
 				System.out.println("Dame la matrícula.");
 				coche.setMatricula(sc.nextLine());
 				
-				System.out.println("Dame la marca");
+				System.out.println("Dame la marca.");
 				coche.setMarca(sc.nextLine());
+				
+				System.out.println("Dame el modelo.");
+				coche.setModelo(sc.nextLine());
+				
+				System.out.println("Dame la potencia.");
+				coche.setPotencia(Integer.parseInt(sc.nextLine()));
+				
+				System.out.println("Dame la cilindrada");
+				coche.setCilindrada(Float.parseFloat(sc.nextLine()));
 				
 				//le metemos el objeto al array
 				coches[i] = coche;
@@ -59,11 +64,15 @@ public class UF2404EjercicioACochePrueba {
 				System.out.println("¿Quires continuar? Escribe 1 para seguir, 2 para salir.");
 				continuar=Integer.parseInt(sc.nextLine());
 				if (continuar!=1) {
-					i=numCoches;
+					//si sale, printamos los datos que ha metido y salimos
+					System.out.println("El éstas son las características de los coches.");
+					for (int j = 0; j < contadorSeguridad; j++) {
+						System.out.println(coches[j]);
+					}
 					break;
 				}
 				
-				//sacamos datos por pantalla
+				//cuando ha llenado el array sacamos datos por pantalla
 				if (i==(numCoches-1)) {
 					System.out.println("El éstas son las características de los coches.");
 					for (int j = 0; j < contadorSeguridad; j++) {
