@@ -2,7 +2,7 @@ package com.ipartek.formacion.clases.animales;
 
 import java.util.ArrayList;
 
-public class Prueba {
+public class Main {
 
 	public static void main(String[] args) {
 
